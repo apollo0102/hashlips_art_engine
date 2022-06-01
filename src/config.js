@@ -5,9 +5,9 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
-const baseUri = "ipfs://NewUriToReplace";
+const namePrefix = "RACC";
+const description = "RACC collection";
+const baseUri = "https://gateway.pinata.cloud/ipfs/QmUtkXnA7xLuBtWKxyUwVhZh1NSySboFeBJBrSwxWzBywU";
 
 const solanaMetadata = {
   symbol: "YC",
@@ -24,15 +24,17 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 10000,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Backgrounds" },
+      { name: "Base" },
+      { name: "Body" },
+      { name: "Wing" },
+      { name: "Clothes" },
+      { name: "Masks" },
+      { name: "Head" },
+      { name: "Mouth" },
+      { name: "Eyes" },
     ],
   },
 ];
@@ -42,8 +44,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 3000,
+  height: 3000,
   smoothing: false,
 };
 
@@ -78,7 +80,7 @@ const background = {
   default: "#000000",
 };
 
-const extraMetadata = {};
+const extraMetadata = {creator:"rrr"};
 
 const rarityDelimiter = "#";
 
